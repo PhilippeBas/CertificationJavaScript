@@ -12,3 +12,4 @@ if (moyenneEleve < 10){
 }else{     
     console.log("Je n'ai pas compris la moyenne du candidat");
 }
+
