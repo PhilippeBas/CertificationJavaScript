@@ -8,9 +8,11 @@ b++;                //b contient la valeur 2
 console.log(b);     //affiche la valeur de b
 
 
+
 /*
 Travail sur les expressions
 */
+
 // 3 est une expression dont la valeur est le nombre 3
 var c = 3;
 // c est une expression dont la valeur est celle de c (ici 3)
@@ -26,9 +28,13 @@ console.log(e);
 e = (3 + 2) * 4; // e contient la valeur 20
 console.log(e);
 
+
+
+
 /*
 Travail sur les conversions de type
 */
+
 var f = 100; //déclaration de f et affectation à f de la valeur 100
 console.log("La valeur de f contient la valeur " + f);
 
@@ -39,3 +45,30 @@ var h = "5";
 console.log(h + 1); // Concaténation : affiche la chaîne "51"
 h = Number("5");
 console.log(h + 1); // Addition numérique : affiche le nombre 6
+
+
+
+/*
+Intéraction avec l'utilisteur
+*/
+
+//Demande d'écrire le prenom
+var prenom = prompt("Entrez votre prénom: ");
+alert("Bonjour, " + prenom);
+console.log("Bonjour, " + prenom);
+
+//Demande d'écrire un numbre
+var saisie = prompt("Entrez un nombre: ");
+var nb = Number(saisie);// convertionn le valeur en nombre grace à Number
+console.log(nb);
+
+
+
+/*
+Exo avec un bonjour Amélioré
+*/
+
+var prenom = prompt("Entrez votre prénom: ");
+var nom = prompt("Entrz votre Nom: ");
+alert ("bonjour, " + prenom + " " + nom);
+console.log("Bonjour, " + prenom + " " + nom);
