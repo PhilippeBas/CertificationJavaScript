@@ -24,7 +24,7 @@ console.log(perso.nom + " a " + perso.sante + " points de vie et " + perso.force
 
 
 
-//Ajout de méthodes aux objets
+//Ajout de Méthodes aux objets
 
 console.log("\n Ajout de méthodes aux objets");
 // Renvoie la description d'un personnage
@@ -93,7 +93,7 @@ console.log(perso.decrire());
 //          // ...
 //      },
 //      // ...
-//  };   
+//  };   git 
 //
 //  console.log(monObjet.propriete1); // Affiche la propriété propriete1 de monObjet
 //
