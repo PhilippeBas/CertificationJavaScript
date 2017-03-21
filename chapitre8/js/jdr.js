@@ -9,10 +9,10 @@ var Personnage = {
     sante: 0,
     force: 0,
     xp: 0,
-    
+ 
     // Renvoie la description du personnage
     decrire: function (){
-        var description = this.nom + " a " + this.sante + " point de vie, " +this.force + " en force et " + this.xp + " point d'expérience" ;
+        var description = this.nom + " a " + this.sante + " point de vie, " +this.force + " en force et " + this.xp + " point d'expérience";
         return description;
     }
 };
@@ -36,6 +36,7 @@ console.log(perso2.decrire()); // affiche personnage 2
 
 
 console.log("----------------------------------------");
+console.log("----------------------------------------");
 /*
 Amélioration en créant
 une Fonction d'initialisation dans l'objet Personnage
@@ -48,11 +49,14 @@ var Personnage ={
         this.sante = sante;// "non" correspond à un paramètre de la méthode
         this.force = force;
         this.xp = 0;
+        this.or = 10;
+        this.cle = 1;
+      
     },
     
     //Renvoie la description du personnage
     decrire: function (){
-        var description = this.nom + " a " + this.sante + " point de vie, " + this.force + " point de force et " +  this.xp + " point d'expérience";
+        var description = this.nom + " a " + this.sante + " point de vie, " + this.force + " point de force et " +  this.xp + " point d'expérience, " + this.or + " pièces d'or et " + this.cle + " clé(s)";
         return description;
     }
     
@@ -73,6 +77,8 @@ console.log(perso4.decrire());
 
 
 console.log("----------------------------------------");
+console.log("----------------------------------------");
+console.log("----------------------------------------");
 /*
 Nouvelle Modélisation (Joueur et adversaire) avec point commun et spécifités qui les distinguent
 */
@@ -83,6 +89,8 @@ var Personnage = {
         this.nom = nom;
         this.sante = sante;
         this.force = force;
+        this.or = 10;
+        this.cle = 1;
     },
     
     /*
@@ -119,7 +127,7 @@ Joueur.initJoueur = function (nom, sante, force){
 //Renvoie la description du joueur
 Joueur.decrire = function (){
   var description = this.nom + " a " + this.sante + " points de vie, " +
-        this.force + " en force et " + this.xp + " points d'expérience";
+        this.force + " en force et " + this.xp + " points d'expérience, " + this.or + " pièces d'or et  " + this.cle + " clé(s)";
     return description;
 };
 
@@ -134,8 +142,10 @@ Joueur.decrire = function (){
 Joueur.combattre = function (adversaire){
   this.attaquer(adversaire);
     if (adversaire.sante === 0){
-        console.log(this.nom + " a tué " + adversaire.nom + " et gagne " + adversaire.valeur + " point d'expérience");
+        console.log(this.nom + " a tué " + adversaire.nom + " et gagne " + adversaire.valeur + " point d'expérience, ainsi que " + adversaire.or + " pièces d'or et " + adversaire.cle + " clé(s)");
         this.xp  += adversaire.valeur;
+        this.or += adversaire.or;
+        this.cle += adversaire.cle;
     } 
 };
 
