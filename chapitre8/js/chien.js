@@ -19,7 +19,7 @@ aboyer: function() {
     } else if (this.taille < 25) {
         aboiement = " Kaii ! Kaii !";
     }
-    return aboiement
+    return aboiement;
 }
 };
 
