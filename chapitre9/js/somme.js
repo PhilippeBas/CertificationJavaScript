@@ -33,3 +33,5 @@ for (var i = 0; i < valeurs.length; i++){
 }
 console.log("La valeur minimun du tableau est ") + valeurMini;
 
+
+
