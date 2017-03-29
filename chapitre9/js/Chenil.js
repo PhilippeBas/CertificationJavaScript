@@ -51,3 +51,5 @@ console.log("\n Le chenil héberge " + chenil.length + " chien(s) : ");
 chenil.forEach(function (chien){
    console.log( chien.nom + " est un " + chien.race + " mesurant " + chien.taille + " cm. Il aboie : " + chien.aboyer()); 
 });
+
+
